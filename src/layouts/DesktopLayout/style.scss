@@ -1,0 +1,34 @@
+.main-container {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  overflow-y: scroll;
+  background-position: center;
+  background-size: cover;
+  @include scroll-remove;
+
+  .blur-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000058;
+
+    backdrop-filter: blur(0px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      background-color: $color-black;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    & {
+      background-color: $color-white;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+}

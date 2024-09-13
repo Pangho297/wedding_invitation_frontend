@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  frontend:
+    image: yongineer/my_wedding_invite_frontend:latest
+    container_name: wedding_invite_fe_dev
+    restart: always
+    ports:
+      - "6173:6173"
+    command: npm run dev

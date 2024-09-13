@@ -1,0 +1,34 @@
+.home-container {
+  @include flex-column;
+  gap: 16px;
+
+  .section-container {
+    min-height: 100vh;
+  }
+
+  .backdrop {
+    width: 100%;
+    height: 100vh;
+    @include display-center;
+    backdrop-filter: blur(8px);
+    transition: backdrop-filter 300ms ease-in-out;
+
+    &:has(.visible) {
+      backdrop-filter: none;
+    }
+  }
+
+  .top-section {
+    background: url("/src/assets/images/image_1.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .middle-section {
+    background: url("/src/assets/images/image_13.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

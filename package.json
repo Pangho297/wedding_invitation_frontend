@@ -1,0 +1,46 @@
+{
+  "name": "yj_wedding_invitation_front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "antd-mobile": "^5.32.2",
+    "axios": "^1.5.0",
+    "copy-to-clipboard": "^3.3.3",
+    "dayjs": "^1.11.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-insta-stories": "^2.6.2",
+    "react-intersection-observer": "^9.5.2",
+    "react-kakao-maps-sdk": "^1.1.19",
+    "react-responsive": "^9.0.2",
+    "react-router-dom": "^6.15.0",
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-plugin-webfont-dl": "^3.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "kakao.maps.d.ts": "^0.1.38",
+    "sass": "^1.66.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

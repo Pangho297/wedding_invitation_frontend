@@ -1,0 +1,23 @@
+@mixin typography($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin display-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin scroll-remove() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

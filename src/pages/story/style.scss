@@ -1,0 +1,93 @@
+@keyframes likeHeartAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  15% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  45%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+.story-container {
+  position: relative;
+  height: 100vh;
+  .story-wrapper {
+    position: relative;
+    width: 100%;
+
+    .close-button {
+      position: absolute;
+      top: 45px;
+      right: 16px;
+      z-index: 10;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 200px;
+      padding: 10px 0px;
+    }
+  }
+
+  .like-wrapper {
+    position: fixed;
+    max-width: $max-width;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    z-index: 10000;
+
+    @media screen and (min-width: 1200px) {
+      left: 80px;
+    }
+
+    .story-icon {
+      width: 24px;
+      height: 24px;
+      @include display-center;
+      font-size: 24px;
+
+      &.heart {
+        position: relative;
+
+        .dislike {
+          color: $color-white;
+        }
+        .like {
+          position: absolute;
+          top: -2px;
+          left: 0px;
+          transform: scale(0);
+          color: $color-red;
+
+          &.active {
+            animation-duration: 1000ms;
+            animation-name: likeHeartAnimation;
+            animation-timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+
+    .like-count {
+      color: $color-white;
+      font-size: 18px;
+    }
+  }
+}

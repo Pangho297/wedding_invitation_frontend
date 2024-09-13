@@ -1,0 +1,151 @@
+@keyframes photoLikeHeartAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  15% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  45%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+.feed-detail-container {
+  @include flex-column;
+  min-height: 100vh;
+
+  .feed-header {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+
+    .feed-header-left {
+      width: 20px;
+      height: 20px;
+      @include display-center;
+      font-size: 20px;
+    }
+
+    .feed-header-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @include typography(20px, 500);
+    }
+
+    .feed-header-right {
+      display: flex;
+      gap: 24px;
+      .my-button {
+        width: 20px;
+        height: 20px;
+        @include display-center;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .feed-image-container {
+    height: 480px;
+    position: relative;
+
+    .thumbnail_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .heart-anime {
+      position: absolute;
+      top: calc(50% - 160px);
+      left: calc(50% - 150px);
+      width: 320px;
+      height: 300px;
+      color: $color-red;
+      transform: scale(0);
+      z-index: 2;
+      font-size: 320px;
+
+      &.active {
+        animation-duration: 1000ms;
+        animation-name: photoLikeHeartAnimation;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  .feed-body {
+    height: 100%;
+    .swiper-item {
+      height: 100%;
+    }
+
+    .link-container {
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 12px;
+      background-color: #1fa1ff;
+
+      p {
+        color: $color-white;
+      }
+    }
+
+    .feed-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+
+      .feed-icon-left {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .feed-icon {
+        width: 24px;
+        height: 24px;
+        @include display-center;
+        font-size: 24px;
+
+        &.heart {
+          position: relative;
+          .like {
+            position: absolute;
+            top: -2px;
+            left: 0px;
+            transform: scale(0);
+            transition: 150ms ease;
+            transition-property: transform color;
+            color: $color-red;
+
+            color: $color-red;
+
+            &.active {
+              transform: scale(1);
+            }
+          }
+        }
+
+        .like {
+          animation-duration: 1000ms;
+          animation-name: "likeHeartAnimation";
+          animation-timing-function: ease-in-out;
+        }
+      }
+    }
+  }
+}

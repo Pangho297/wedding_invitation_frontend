@@ -1,0 +1,37 @@
+.main-header-container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+
+  .share-button {
+    width: 20px;
+    height: 20px;
+    @include display-center;
+    font-size: 20px;
+    color: $color-text;
+  }
+
+  .main-header-title {
+    font-size: 22px;
+    font-family: "Blue Vinyl", Arial, sans-serif;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .main-header-link {
+    width: 16px;
+    height: 16px;
+    @include display-center;
+    // border: 3px solid $color-black;
+    box-shadow: 0 0 0 3px $color-black;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $color-text;
+  }
+}

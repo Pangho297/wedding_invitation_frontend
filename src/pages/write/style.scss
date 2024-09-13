@@ -1,0 +1,105 @@
+.write-container {
+  @include flex-column;
+  min-height: 100vh;
+
+  .write-header {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    background-color: $color-white;
+    z-index: 2;
+
+    .write-escape-button {
+      @include typography(16px, 500);
+      color: $color-black;
+    }
+
+    .write-title {
+      @include typography(20px, 500);
+    }
+
+    .write-upload {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .write-button {
+        @include typography(18px, 500);
+        color: $color-primary;
+      }
+    }
+  }
+
+  .write-body {
+    @include flex-column;
+    gap: 16px;
+    height: calc(100% - 100px);
+    padding: 16px 8px;
+
+    .write-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .write-input-container {
+        display: flex;
+        gap: 16px;
+
+        .write-input {
+          border-bottom: 1px solid $border-color;
+          padding: 6px 4px;
+          &::placeholder {
+            color: $color-second;
+          }
+        }
+      }
+    }
+
+    .adm-text-area {
+      & .adm-text-area-element {
+        color: $color-text;
+      }
+
+      & .adm-text-area-element::placeholder {
+        font-size: 16px;
+        color: $color-second;
+      }
+    }
+
+    #imageUpload {
+      display: none;
+    }
+    .icon-wrapper {
+      width: 24px;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .thumbnail-wrapper {
+      position: relative;
+      .thumbnail-image {
+        width: 100%;
+        height: 390px;
+        aspect-ratio: 1;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+
+      .thumbnail-delete {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        right: 15px;
+        padding: 4px;
+        border-radius: 50%;
+        box-sizing: content-box;
+        color: #ffffff;
+        background-color: #0000003f;
+      }
+    }
+  }
+}

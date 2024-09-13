@@ -1,0 +1,14 @@
+.mobile-container {
+  position: relative;
+  height: fit-content;
+  min-height: 100vh;
+  max-width: $max-width;
+  width: 100%;
+  background-color: $color-white;
+  border-color: $border-color;
+  margin-left: 80px;
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 0px;
+  }
+}

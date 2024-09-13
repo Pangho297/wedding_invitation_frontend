@@ -1,0 +1,117 @@
+.profile-container {
+  @include flex-column;
+  gap: 16px;
+  padding: 0px 16px;
+
+  // Profile Top
+  .profile-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .story-link {
+      position: relative;
+      width: 90px;
+      height: 90px;
+
+      svg {
+        position: absolute;
+      }
+
+      .profile-photo {
+        position: absolute;
+        width: 75.789px;
+        height: 75.789px;
+        top: 7.5px;
+        left: 7.5px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .calender-container {
+      width: 100%;
+      @include flex-column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .d-day-container {
+      width: 100%;
+      @include flex-column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+
+      .d-day-times {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .d-day-wrapper {
+          @include flex-column;
+          align-items: center;
+
+          .time {
+            @include typography(32px, 700);
+            color: $color-primary;
+
+            &.days {
+            }
+          }
+
+          .time-type {
+            font-size: 15px;
+            color: $color-primary;
+
+            &.days {
+            }
+          }
+        }
+
+        .colon {
+          @include typography(32px, 700);
+        }
+      }
+
+      .timer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .timer-wrapper {
+          @include flex-column;
+          align-items: center;
+
+          .time {
+            @include typography(20px, 500);
+          }
+
+          .time-type {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  // Profile Bottom
+  .profile-bottom {
+    @include flex-column;
+    gap: 8px;
+
+    .profile-title {
+      @include typography(18px, 500);
+    }
+
+    .map-link {
+      color: $color-primary;
+      font-size: 14px;
+    }
+
+    .profile-content {
+      font-size: 15px;
+      line-height: 120%;
+    }
+  }
+}
